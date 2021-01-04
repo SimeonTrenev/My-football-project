@@ -1,0 +1,32 @@
+{{> header}}
+
+<form class="text-center border border-light p-5" action="#/addTeam" method="POST">
+    <h1>Add Team</h1>
+    <div class="form-group">
+        <label for="title">Football Team Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="title" value="">
+    </div>
+    <div class="form-group">
+        <label for="description">Football team Description</label>
+        <textarea class="form-control" placeholder="Description" name="description"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="description">First best player</label>
+        <textarea class="form-control" placeholder="Description" name="firstPlayer"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="description">Second best player</label>
+        <textarea class="form-control" placeholder="Description" name="secondPlayer"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="description">Third best player</label>
+        <textarea class="form-control" placeholder="Description" name="thirdPlayer"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="imageUrl">Image url</label>
+        <input type="text" class="form-control" placeholder="Image Url" name="imageUrl" value="">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{{> footer}}

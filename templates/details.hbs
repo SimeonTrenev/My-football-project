@@ -1,0 +1,38 @@
+{{> header}}
+
+<div class="container">
+    <div class="row bg-light text-dark">
+        <h1>Football club: {{club.title}}</h1>
+
+        <div class="col-md-8">
+            <img class="img-thumbnail" src="{{club.imageUrl}}" alt="Movie">
+        </div>
+        <div class="col-md-4 text-center">
+            <h3 class="my-3 ">Football club description</h3>
+            <p>{{club.description}}</p>
+
+            <h5 class="my-3 ">Best player:</h5>
+            <p>{{club.firstPlayer}}</p>
+
+            <h5 class="my-3 ">Second best player:</h5>
+            <p>{{club.secondPlayer}}</p>
+
+            <h5 class="my-3 ">Third best player:</h5>
+            <p>{{club.thirdPlayer}}</p>
+            {{#if club.isIAmACreator}}
+            <a class="btn btn-danger" href="#/delete/{{club.id}}">Delete</a>
+            <a class="btn btn-warning" href="#/edit/{{club.id}}">Edit</a>
+            <span class="enrolled-span">Liked {{club.likes}}</span>
+            {{/if}}
+            {{#unless club.isIAmACreator}}
+            {{#unless club.isILikeAClub}}
+            <a class="btn btn-primary" href="#/like/{{club.id}}">Like</a>
+            {{else}}
+            <span class="enrolled-span">Liked {{club.likes}}</span>
+            {{/unless}}
+            {{/unless}}
+        </div>
+    </div>
+</div>
+
+{{> footer}}
